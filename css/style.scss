@@ -1,3 +1,248 @@
+
+
+// Primary colors
+
+$Pink: #ff52bf;
+$Light-Pink: 	#ff8fd8;
+$Light-Red: #ff4242;
+
+// Neutral colors
+$gray:#999;
+$Very-Dark-Cyan: 	#00252e;
+$Very-Pale-Blue: 	#f5faff;
+
+
+@mixin Mypadding {
+    	padding-left: 50px;
+        padding-right: 50px;
+}
+// Headings fonts
+/*
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 700
+### Body
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400, 600, 700
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+
 body{
+    padding: 0;
+    background-color: #fff;
+    margin: 0;
+    font-family: 'Open Sans' ,tahoma, sans-serif;
+    text-align: center;
+}
+input:hover,button:hover{
+    cursor: pointer;
+}
+h1,h2,h3{
+    color: $Very-Dark-Cyan;
+    font-family: Poppins, 'Open Sans' ,tahoma, sans-serif;
+
+}
+header{
+    display: flex;
+    flex-direction: row;
+    padding:10px;
+    @include Mypadding();
+    align-items: center;
+    justify-content: space-between;
+    img{
+     width: 100px;
+    }
+    button{
+        color: $Pink;
+        border: 1px solid $Pink;
+        background-color: transparent;
+        display: block;
+        padding: 5px 15px;
+        border-radius: 20px;
+        box-shadow: 0 0 1px $Pink;
+        text-transform: capitalize;
+        &:hover{
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+.hero{
+    padding: 10px;
+    @include Mypadding();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    gap: 15px;
+    p{
+        color: $Very-Dark-Cyan;
+    }
+    button{
+        background-color: $Pink;
+        color: #eee;
+        padding: 15px 50px;
+        border-radius: 50px;
+        border: none;
+        box-shadow: 0 0 10px rgba(50,50,50,0.5);
+        font-weight: bolder;
+    }
+
+}
+.statics{
+    display: grid;
+    @include Mypadding();
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 100px;
+    .img-screen-mockups{
+        width: 100%;
+        grid-column: 1/-1;
+    }
+    .item{
+        text-align: left;
+        grid-column: 2;
+        grid-row: span 1;
+        color: $Very-Dark-Cyan;
+        h3{
+            font-size: 72px;
+            margin: 0;
+        }
+        h4{
+            font-weight: lighter;
+            text-align: center;
+            color: $gray;
+        }
+    }
+
+}
+.curved{
+    width:100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.grow-together,.conversation,.users{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include Mypadding();
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 100px;
+    background-size: contain;
     
+    .text{
+        grid-column: 1/-1;
+        grid-row: 2;
+    }
+    .image{
+        grid-column: 1/-1;
+        width: 90%;
+    }
+}
+.grow-together,.users{
+    background-color: $Very-Pale-Blue;
+}
+.ready-to-build{
+        @include Mypadding();
+        font-size: 80%;
+    .get-started{
+        background-color: $Pink;
+        color: #eee;
+        padding: 15px 50px;
+        border-radius: 50px;
+        border: none;
+        box-shadow: 0 0 10px rgba(50,50,50,0.5);
+        font-weight: bolder;
+        margin-bottom: 150px;
+    }
+}
+    footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    row-gap: 100px;
+    line-height: 2;
+    margin-top: 0;
+    background-color: $Very-Dark-Cyan;
+    color: $Very-Pale-Blue;
+    padding: 20px;
+    path{
+        fill: white;
+    }
+    .News-letter{
+        color: $Very-Pale-Blue;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    .col{
+    text-align:left;
+    }
+    .col-1{
+        grid-column: 1/-1;
+        grid-row: 2;
+        ul.contact{
+            list-style: none;
+            margin: 25px;
+            line-height: 3;
+            padding: 0;
+            li {
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: 15px;
+                }
+            }
+        
+            
+        }
+        .social{
+            display: flex;
+            gap: 10px;
+            font-size: 30px;
+            a:hoved{
+                cursor: pointer;
+            }
+        }
+
+    }
+    .col-2{
+        grid-column: 1/-1;
+        grid-row: 1;
+        .subscribe{
+            width: 100%;
+            display: grid;
+            input{
+                box-sizing: border-box;
+                width: 100%;
+                margin: 0 auto;
+                padding: 20px 10px;
+                border-radius: 10px;
+            }
+            button{
+                background-color: $Pink;
+                color: #eee;
+                display: inline-block;
+                padding: 15px 50px;
+                border-radius: 10px;
+                margin-left: auto;
+                margin-top: 10px;
+                margin-right: 0;
+                border: none;
+                font-weight: bolder;
+                width: 50%;
+                max-width: 300px;
+            font-family: "Poppins";
+            font-size: 16px;
+            font-weight: normal;
+                
+
+            }
+        }
+    }
 }
