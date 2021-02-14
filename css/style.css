@@ -390,6 +390,9 @@ footer .col-2 .subscribe button {
     padding-bottom: 50px;
     background-size: contain;
   }
+  .grow-together p, .conversation p, .users p {
+    margin: 0;
+  }
   .grow-together .container, .conversation .container, .users .container {
     padding-left: 5%;
     padding-right: 5%;
