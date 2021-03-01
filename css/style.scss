@@ -12,6 +12,7 @@ $Very-Dark-Cyan: 	#00252e;
 $Very-Pale-Blue: 	#f5faff;
 
 
+$container-max:1200px;
 @mixin Mypadding {
     	padding-left: 5%;
         padding-right: 5%;
@@ -20,7 +21,7 @@ $Very-Pale-Blue: 	#f5faff;
     max-width:500px;
 }
 @mixin container-max-width {
-    max-width:1300px;
+    max-width:$container-max;
     
 }
 // Headings fonts
@@ -36,6 +37,7 @@ $Very-Pale-Blue: 	#f5faff;
 
 
 body{
+    font-size: 1.35rem;
     padding: 0;
     background-color: #fff;
     margin: 0;
@@ -44,6 +46,7 @@ body{
 }
 input:hover,button:hover{
     cursor: pointer;
+    opacity: 0.7;
 }
 h1,h2,h3{
     color: $Very-Dark-Cyan;
@@ -59,11 +62,11 @@ header{
     flex-direction: row;
     padding:10px;
     @include Mypadding();
+    padding-top: 1.7rem;
     align-items: center;
     justify-content: space-between;
     img{
-     width: 15%;
-     min-width: 100px;
+     width: 200px;
     }
     button{
         color: $Pink;
@@ -105,6 +108,7 @@ header{
         font-weight: bolder;
     }
 
+
 }
 .statics{
     display: grid;
@@ -115,7 +119,9 @@ header{
     margin: auto auto;
     @include container-max-width();
     .img-screen-mockups{
-        width: 100%;
+        
+        width: calc(0.65*100vw);
+        max-width:calc(0.65*$container-max); ;
         grid-column: 1/-1;
     }
     .item{

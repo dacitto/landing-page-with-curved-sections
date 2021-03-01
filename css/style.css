@@ -8,6 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 body {
+  font-size: 1.35rem;
   padding: 0;
   background-color: #fff;
   margin: 0;
@@ -17,6 +18,7 @@ body {
 
 input:hover, button:hover {
   cursor: pointer;
+  opacity: 0.7;
 }
 
 h1, h2, h3 {
@@ -40,6 +42,7 @@ header {
   padding: 10px;
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 1.7rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -49,8 +52,7 @@ header {
 }
 
 header img {
-  width: 15%;
-  min-width: 100px;
+  width: 200px;
 }
 
 header button {
@@ -114,11 +116,12 @@ header button:hover {
       grid-template-rows: auto;
   grid-row-gap: 100px;
   margin: auto auto;
-  max-width: 1300px;
+  max-width: 1200px;
 }
 
 .statics .img-screen-mockups {
-  width: 100%;
+  width: calc(0.65*100vw);
+  max-width: calc(0.65*$container-max);
   grid-column: 1/-1;
 }
 
@@ -168,7 +171,7 @@ header button:hover {
       grid-template-columns: 1fr 2fr 1fr;
   padding-left: 5%;
   padding-right: 5%;
-  max-width: 1300px;
+  max-width: 1200px;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   display: -ms-grid;
@@ -238,7 +241,7 @@ footer .container {
   margin-top: 0;
   margin: 0 auto;
   padding: 20px;
-  max-width: 1300px;
+  max-width: 1200px;
 }
 
 footer .logo {
